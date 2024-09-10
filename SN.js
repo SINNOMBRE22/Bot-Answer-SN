@@ -48,7 +48,7 @@ _*ENTRE OTRAS COMPAÑÍAS*_
 
 *También para otros países, solo pregunta.*
 
-```Cualquier duda no dudes en preguntar```
+\`\`\`Cualquier duda no dudes en preguntar\`\`\`
 
 ¡Contacto directo para obtener más información! 👉https://wa.me/message/BSE4ZCEPY7ZOP1
                 `);
