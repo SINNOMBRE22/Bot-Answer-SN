@@ -61,15 +61,8 @@ _*ENTRE OTRAS COMPAÑÍAS*_
 client.on('message', async message => {
     const msg = message.body.toLowerCase().trim(); // Normaliza el mensaje
 
-    // Verificar si el mensaje es del número del dueño
-    const ownerNumber = '+5217971532324@c.us'; // Formato de número en WhatsApp
-
-    // Verifica si el mensaje empieza con el prefijo '.' (para comandos del dueño)
+    // Verifica si el mensaje empieza con el prefijo '.'
     if (msg.startsWith('.')) {
-        if (message.from !== ownerNumber) {
-            return; // Ignorar si no es el dueño
-        }
-
         // Eliminar el prefijo para obtener el comando
         const command = msg.slice(1);
 
