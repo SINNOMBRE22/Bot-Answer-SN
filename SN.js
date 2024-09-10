@@ -24,10 +24,19 @@ client.on('ready', () => {
 client.on('message', message => {
     const msg = message.body.toLowerCase().trim(); // Normaliza el mensaje
 
+    // Verifica si el mensaje empieza con el prefijo '$'
+    if (!msg.startsWith('$')) {
+        // Ignorar mensajes que no comiencen con el prefijo
+        return;
+    }
+
+    // Eliminar el prefijo para obtener el comando
+    const command = msg.slice(1);
+
     // Comprobar si el mensaje es un comando específico
-    switch (msg) {
-        case 'menú':
+    switch (command) {
         case 'menu':
+        case 'menú':
             message.reply(`¡Bienvenido al menú! Elige una opción:
 1️⃣ Información del bot
 2️⃣ Servicios
@@ -72,13 +81,10 @@ Escribe la letra correspondiente para más información.`);
             break;
 
         default:
-            // Ignorar cualquier mensaje que no sea un comando específico
-            // Puedes comentar la siguiente línea si no quieres enviar ninguna respuesta para mensajes no reconocidos
-            message.reply('Comando no reconocido. Escribe "menú" para ver las opciones disponibles.');
+            // Ignorar comandos no reconocidos
             break;
     }
 });
 
 // Iniciar el cliente
 client.initialize();
-
