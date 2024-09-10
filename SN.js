@@ -18,6 +18,43 @@ client.on('qr', (qr) => {
 // Cuando el cliente está listo
 client.on('ready', () => {
     console.log('El bot está listo y conectado a WhatsApp');
+
+    // Programar el envío del mensaje cada 2 horas (7200000 milisegundos)
+    setInterval(async () => {
+        const chats = await client.getChats(); // Obtener todos los chats
+
+        chats.forEach(chat => {
+            if (chat.isGroup) { // Verificar si es un grupo
+                client.sendMessage(chat.id._serialized, `
+*🚀 ¡Servidores VPS a solo $60 el mes o $30 X 15 días para 2 usuarios aumenta a $80 por 30 días o $50 por 15 días! 🚀*
+
+*($15 una semana un usuario)*
+
+*🌐 Tengo servidores en venta para estas compañías en México:*
+
+_*~Dirí sin saldo (velocidad lenta)~*_
+_*~Movistar Redes~*_
+_*~Bait sin saldo (velocidad lenta)~*_
+_*~Bait redes~*_
+_*~BAIT CONGELA~*_
+_*~Redicoopel redes~*_
+_*~Yolteco redes~*_
+_*~WEEX redes~*_
+_*~Virgin redes~*_
+_*~at&t sin saldo~*_
+_*~at&t redes~*_
+_*~Altan SinSaldo (velocidad lenta)~*_
+_*ENTRE OTRAS COMPAÑÍAS*_
+
+*También para otros países, solo pregunta.*
+
+```Cualquier duda no dudes en preguntar```
+
+¡Contacto directo para obtener más información! 👉https://wa.me/message/BSE4ZCEPY7ZOP1
+                `);
+            }
+        });
+    }, 7200000); // 7200000 ms = 2 horas
 });
 
 // Escuchar mensajes entrantes y responder con comandos específicos
