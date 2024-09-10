@@ -62,7 +62,7 @@ client.on('message', async message => {
     const msg = message.body.toLowerCase().trim(); // Normaliza el mensaje
 
     // Verificar si el mensaje es del número del dueño
-    const ownerNumber = '5217971532324@c.us'; // Formato de número en WhatsApp
+    const ownerNumber = '+5217971532324@c.us'; // Formato de número en WhatsApp
 
     // Verifica si el mensaje empieza con el prefijo '.' (para comandos del dueño)
     if (msg.startsWith('.')) {
