@@ -1,14 +1,14 @@
 un bot auto responder WhatsApp ouedes modificarlos no soy programador🩹
 
 
-git clone https://github.com/SINNOMBRE22/Bot-Answer-SN
+> git clone https://github.com/SINNOMBRE22/Bot-Answer-SN
 
-cd Bot-Answer-SN
+> cd Bot-Answer-SN
 
-npm install
+> npm install
 
-node SN.js
+> node SN.js
 
-npm install whatsapp-web.js. (de ser necesario)
+> npm install whatsapp-web.js. (de ser necesario)
 
 
