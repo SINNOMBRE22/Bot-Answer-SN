@@ -29,4 +29,4 @@
 
 ---
 ```
-#Me Gustaria Declararte Mi Amor Pero Sólo Se Declarar Variables 
+#Me Gustaria Declararle Mi Amor Pero Sólo Se Declarar Variables 
