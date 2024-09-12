@@ -85,6 +85,9 @@ _Si no conecta, te damos una nueva._
     }, 43200000); // 7200000 ms = 2 horas
 });
 
+// Importar módulos necesarios
+const { exec } = require('child_process'); // Importar el módulo para ejecutar comandos del sistema
+
 // Escuchar mensajes entrantes y responder con comandos específicos
 client.on('message', async message => {
     const msg = message.body.toLowerCase().trim(); // Normaliza el mensaje
@@ -315,6 +318,34 @@ Siguiendo estos pasos, puedes configurar un proxy y disfrutar de la conexión Ne
                 message.reply('Gracias por usar el bot. ¡Hasta luego!');
                 break;
 
+                case 'actualizar':
+            message.reply('Actualizando el bot...');
+
+            // Ejecutar el comando `git pull` para actualizar el bot
+            exec('git pull', (error, stdout, stderr) => {
+                if (error) {
+                    console.error(`Error durante la actualización: ${error.message}`);
+                    message.reply('Hubo un error al actualizar el bot.');
+                    return;
+                }
+                if (stderr) {
+                    console.error(`stderr: ${stderr}`);
+                    message.reply(`Actualización completa, pero con advertencias: ${stderr}`);
+                    return;
+                }
+                console.log(`stdout: ${stdout}`);
+                message.reply('El bot ha sido actualizado exitosamente.');
+            });
+            break;
+
+        default:
+            message.reply('Comando no reconocido.');
+            break;
+    }
+});
+
+// Iniciar el cliente
+client.initialize();
             default:
                 // Ignorar comandos no reconocidos
                 break;
