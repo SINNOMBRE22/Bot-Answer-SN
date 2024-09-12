@@ -299,11 +299,11 @@ Para más información, puedes usar los comandos en la lista o contactarme direc
 
 ### Consejos adicionales:
 - Asegúrate de buscar servidores y archivos de configuración específicos para tu país y operador.
-- Si uno no funciona, prueba diferentes configuraciones y proxies.');
+- Si uno no funciona, prueba diferentes configuraciones y proxies.`);
                 break;
 
             case '.vpn':
-                message.reply('Una **VPN** (Red Privada Virtual, por sus siglas en inglés) es una tecnología que permite crear una conexión segura y encriptada entre tu dispositivo e internet. Funciona redirigiendo tu tráfico de internet a través de un servidor remoto, lo que oculta tu dirección IP y protege tu actividad en línea.
+                message.reply(`Una **VPN** (Red Privada Virtual, por sus siglas en inglés) es una tecnología que permite crear una conexión segura y encriptada entre tu dispositivo e internet. Funciona redirigiendo tu tráfico de internet a través de un servidor remoto, lo que oculta tu dirección IP y protege tu actividad en línea.
 
 ### ¿Cómo usar una VPN en Netfree?
 
@@ -320,11 +320,11 @@ Para más información, puedes usar los comandos en la lista o contactarme direc
    - **Acceso gratuito**: En muchos países, las VPNs pueden habilitar acceso gratuito a internet en ciertas redes móviles.
 
 
-Con esto, puedes tener una mejor experiencia Netfree protegiendo tu privacidad y accediendo a internet gratuitamente en ciertos proveedores.');
+Con esto, puedes tener una mejor experiencia Netfree protegiendo tu privacidad y accediendo a internet gratuitamente en ciertos proveedores.`);
                 break;
 
             case '.prx':
-                message.reply('Configurar un **proxy** para Netfree es un proceso que te permite acceder a internet sin gastar datos, utilizando servidores específicos y ajustando ciertos parámetros en tu dispositivo.
+                message.reply(`Configurar un **proxy** para Netfree es un proceso que te permite acceder a internet sin gastar datos, utilizando servidores específicos y ajustando ciertos parámetros en tu dispositivo.
 
 ### Pasos para configurar un proxy en Netfree:
 
@@ -342,11 +342,11 @@ Con esto, puedes tener una mejor experiencia Netfree protegiendo tu privacidad y
 4. **Archivos de configuración**:
    - Algunos servidores Netfree requieren que cargues un archivo de configuración (.ehi, .hpi, .nsv) en estas aplicaciones para conectar correctamente al proxy. Estos archivos contienen las cabeceras y ajustes específicos.
 
-Siguiendo estos pasos, puedes configurar un proxy y disfrutar de la conexión Netfree en tu red móvil.');
+Siguiendo estos pasos, puedes configurar un proxy y disfrutar de la conexión Netfree en tu red móvil.`);
                 break;
 
             case '.blq':
-                message.reply('Para evitar **bloqueos** en Netfree, es esencial aplicar varios métodos y buenas prácticas que ayudan a mantener la conexión estable y sin restricciones:
+                message.reply(`Para evitar **bloqueos** en Netfree, es esencial aplicar varios métodos y buenas prácticas que ayudan a mantener la conexión estable y sin restricciones:
 
 1. **Cambiar de proxy con frecuencia**:
    - Los proxies pueden saturarse o ser bloqueados por los proveedores de servicio. Cambiar a otro proxy funcional y actualizado es una estrategia efectiva para evitar bloqueos.
@@ -367,11 +367,11 @@ Siguiendo estos pasos, puedes configurar un proxy y disfrutar de la conexión Ne
    - Evita conectar a servidores que estén saturados o caídos, ya que esto podría causar bloqueos temporales o interrupciones.
 
 7. **Monitorear las redes sociales o foros**:
-   - Mantente informado sobre bloqueos o nuevas soluciones a través de comunidades en línea dedicadas a Netfree, como grupos de Telegram o foros.');
+   - Mantente informado sobre bloqueos o nuevas soluciones a través de comunidades en línea dedicadas a Netfree, como grupos de Telegram o foros.`);
                 break;
 
             case '.dev':
-                message.reply('**Netfree** puede funcionar en una gran variedad de dispositivos, pero la compatibilidad y el rendimiento pueden depender de varios factores:
+                message.reply(`**Netfree** puede funcionar en una gran variedad de dispositivos, pero la compatibilidad y el rendimiento pueden depender de varios factores:
 
 1. **Teléfonos móviles**:
    - **Android**: Es compatible con múltiples aplicaciones de inyección de proxy, VPN y SSH, como **HTTP Injector**, **KPN Tunnel** y **Psiphon**.
@@ -384,7 +384,7 @@ Siguiendo estos pasos, puedes configurar un proxy y disfrutar de la conexión Ne
    - Funcionan igual que en teléfonos, siempre que sea posible instalar aplicaciones compatibles de VPN o proxy.
 
 4. **Routers**: 
-   - Algunos routers con configuraciones avanzadas permiten usar VPN o túneles SSH, lo que habilita Netfree en toda la red.');
+   - Algunos routers con configuraciones avanzadas permiten usar VPN o túneles SSH, lo que habilita Netfree en toda la red.`);
                 break;
 
             case '.app':
