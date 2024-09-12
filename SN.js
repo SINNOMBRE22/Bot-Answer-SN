@@ -190,13 +190,12 @@ Para más información, puedes usar los comandos en la lista o contactarme direc
                 break;
 
             case 'cfg':
-                console.log('El comando cfg ha sido activado.');
                 message.reply(`Para configurar Netfree (navegación gratuita en internet usando VPNs o proxies), hay varias opciones y pasos a seguir, dependiendo del método que prefieras. Aquí te doy una guía básica para tener Netfree:
 
 1. **Configuración con VPN**:
    - Descarga una aplicación VPN como **Psiphon**, **HTTP Injector**, o **NapsternetV**.
    - Busca servidores o configuraciones VPN Netfree específicas para tu país y proveedor.
-   - Carga el archivo de configuración (con extensión `.ehi` o `.nsv`) en la app.
+   - Carga el archivo de configuración (con extensión ".ehi" o ".nsv") en la app.
    - Activa la VPN para empezar a navegar gratis.
 
 2. **Configuración con Proxy**:
