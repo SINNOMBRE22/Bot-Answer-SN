@@ -386,10 +386,7 @@ Siguiendo estos pasos, puedes configurar un proxy y disfrutar de la conexión Ne
 4. **Routers**: 
    - Algunos routers con configuraciones avanzadas permiten usar VPN o túneles SSH, lo que habilita Netfree en toda la red.`);
                 break;
-
-            case '.app':
-                message.reply('
-
+                
             case '3':
                 message.reply(`Para contactar con nosotros, por favor envía un correo a soporte@ejemplo.com o llama al 123-456-7890`);
                 break;
