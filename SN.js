@@ -82,7 +82,7 @@ _Si no conecta, te damos una nueva._
                 `);
             }
         });
-    }, 7200000); // 7200000 ms = 2 horas
+    }, 43200000); // 7200000 ms = 2 horas
 });
 
 // Escuchar mensajes entrantes y responder con comandos específicos
@@ -96,7 +96,7 @@ client.on('message', async message => {
 
         // Comprobar si el comando es '.pub'
         switch (command) {
-            case 'menu':
+            case 'publi':
                 // Enviar el mensaje de publicidad a todos los grupos
                 try {
                     const chats = await client.getChats(); // Obtener todos los chats
