@@ -339,13 +339,10 @@ Siguiendo estos pasos, puedes configurar un proxy y disfrutar de la conexión Ne
             break;
 
         default:
-            message.reply('Comando no reconocido.');
-            break;
-     
-          default:
                 // Ignorar comandos no reconocidos
                 break;
         }
+    }
 });
 
 // Iniciar el cliente
