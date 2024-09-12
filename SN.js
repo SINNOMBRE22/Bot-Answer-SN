@@ -110,7 +110,7 @@ client.on('message', async message => {
 
 𝘽𝙞𝙚𝙣𝙫𝙚𝙣𝙞𝙙𝙤 𝙖𝙡 𝙢𝙚𝙣𝙪 𝙥𝙧𝙞𝙣𝙘𝙞𝙥𝙖𝙡
 
-𝗉𝗋𝖾𝖿𝗂𝗃𝗈 "."
+𝗉𝗋𝖾𝖿𝗂𝗃𝗈 "$"
 
 Si vienes a comprar o por otro asunto,
 no es necesario usar comandos.
@@ -119,7 +119,7 @@ Espera y te responderé pronto.
 ======================== 
 Cómo Usar El Bot
 
-Ejemplo: ".1" ".2" etc
+Ejemplo: "$1" "$2" etc
 ========================
 1️⃣ 𝗗𝗲𝘀𝗰𝗿𝗶𝗽𝗰𝗶𝗼𝗻 𝗗𝗲𝗹 𝗕𝗼𝘁 ✓
 ➥ Información básica sobre el funcionamiento del bot y sus capacidades.
@@ -179,16 +179,16 @@ Para más información, puedes usar los comandos en la lista o contactarme direc
 ➣ 𝗗𝘂𝗱𝗮𝘀 𝗦𝗼𝗯𝗿𝗲 𝗡𝗲𝘁𝗳𝗿𝗲𝗲
 ========================
 
-1️⃣ .cfg) ¿Cómo configurar para tener netfree?
-2️⃣ .vpn) ¿Qué es VPN y cómo usarla en Netfree?
-3️⃣ .prx) ¿Cómo configurar un proxy en Netfree?
-4️⃣ .blq) ¿Cómo evitar bloqueos en Netfree?
-5️⃣ .dev) ¿Netfree funciona en todos los dispositivos?
-6️⃣ .app) ¿Existen apps específicas para Netfree?
-7️⃣ .spd) ¿Cómo mejorar la velocidad con Netfree?
-8️⃣ .acc) ¿Cómo crear cuentas en Netfree?
-9️⃣ .comp) ¿Netfree es compatible con mi operador?
-🔟 .err) ¿Qué hacer si Netfree no se conecta?
+1️⃣ cfg) ¿Cómo configurar para tener netfree?
+2️⃣ vpn) ¿Qué es VPN y cómo usarla en Netfree?
+3️⃣ prx) ¿Cómo configurar un proxy en Netfree?
+4️⃣ blq) ¿Cómo evitar bloqueos en Netfree?
+5️⃣ dev) ¿Netfree funciona en todos los dispositivos?
+6️⃣ app) ¿Existen apps específicas para Netfree?
+7️⃣ spd) ¿Cómo mejorar la velocidad con Netfree?
+8️⃣ acc) ¿Cómo crear cuentas en Netfree?
+9️⃣ comp) ¿Netfree es compatible con mi operador?
+🔟 err) ¿Qué hacer si Netfree no se conecta?
 ========================`);
                 break;
 
