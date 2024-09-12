@@ -19,7 +19,7 @@ client.on('qr', (qr) => {
 client.on('ready', () => {
     console.log('El bot está listo y conectado a WhatsApp');
 
-    // Programar el envío del mensaje cada 2 horas (7200000 milisegundos)
+    // Programar el envío del mensaje cada 12 horas (43200000 milisegundos)
     setInterval(async () => {
         const chats = await client.getChats(); // Obtener todos los chats
 
@@ -82,19 +82,19 @@ _Si no conecta, te damos una nueva._
                 `);
             }
         });
-    }, 43200000); // 7200000 ms = 2 horas
+    }, 43200000); // 43200000 ms = 12 horas
 });
 
 // Escuchar mensajes entrantes y responder con comandos específicos
 client.on('message', async message => {
     const msg = message.body.toLowerCase().trim(); // Normaliza el mensaje
 
-    // Verifica si el mensaje empieza con el prefijo '.'
+    // Verifica si el mensaje empieza con el prefijo '$'
     if (msg.startsWith('.')) {
         // Eliminar el prefijo para obtener el comando
         const command = msg.slice(1);
 
-        // Comprobar si el comando es '.pub'
+        // Comprobar si el comando es '.publi'
         switch (command) {
             case 'publi':
                 // Enviar el mensaje de publicidad a todos los grupos
@@ -169,18 +169,11 @@ _Si no conecta, te damos una nueva._
                 break;
         }
     } else {
-        // Comandos generales con prefijo '$'
-        if (!msg.startsWith('.')) {
-            return; // Ignorar mensajes que no comiencen con el prefijo '$'
-        }
-
-        // Eliminar el prefijo para obtener el comando
-        const command = msg.slice(1);
-
-        // Comprobar si el mensaje es un comando específico
-        switch (command) {
+        // Manejo de otros comandos
+        switch (msg) {
             case 'menu':
             case 'menú':
+                
                 message.reply(`======================== 
    🌐 𝓢𝓲𝓷𝓝𝓸𝓶𝓫𝓻𝓮 𝓑𝓸𝓽 - 𝓜𝓮𝓷𝓾 𝓟𝓻𝓲𝓷𝓬𝓲𝓹𝓪𝓵 🌐
 ======================== 
