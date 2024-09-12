@@ -346,6 +346,7 @@ Siguiendo estos pasos, puedes configurar un proxy y disfrutar de la conexión Ne
 
 // Iniciar el cliente
 client.initialize();
+
             default:
                 // Ignorar comandos no reconocidos
                 break;
