@@ -341,13 +341,8 @@ Siguiendo estos pasos, puedes configurar un proxy y disfrutar de la conexión Ne
         default:
             message.reply('Comando no reconocido.');
             break;
-    }
-});
-
-// Iniciar el cliente
-client.initialize();
-
-            default:
+     
+          default:
                 // Ignorar comandos no reconocidos
                 break;
         }
