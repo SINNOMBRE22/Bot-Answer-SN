@@ -89,11 +89,7 @@ _Si no conecta, te damos una nueva._
 client.on('message', async message => {
     const msg = message.body.toLowerCase().trim(); // Normaliza el mensaje
 
-       // Ignorar comandos no reconocidos
-                break;
-        }
-    } else {
-        // Comandos generales con prefijo '$'
+       // Comandos generales con prefijo '$'
         if (!msg.startsWith('.')) {
             return; // Ignorar mensajes que no comiencen con el prefijo '$'
         }
