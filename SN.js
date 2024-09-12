@@ -189,7 +189,7 @@ Para más información, puedes usar los comandos en la lista o contactarme direc
 ========================`);
                 break;
 
-            case '.cfg':
+            case 'cfg':
                 message.reply(`Para configurar Netfree (navegación gratuita en internet usando VPNs o proxies), hay varias opciones y pasos a seguir, dependiendo del método que prefieras. Aquí te doy una guía básica para tener Netfree:
 
 1. **Configuración con VPN**:
@@ -222,7 +222,7 @@ Para más información, puedes usar los comandos en la lista o contactarme direc
 - Si uno no funciona, prueba diferentes configuraciones y proxies.`);
                 break;
 
-            case '.vpn':
+            case 'vpn':
                 message.reply(`Una **VPN** (Red Privada Virtual, por sus siglas en inglés) es una tecnología que permite crear una conexión segura y encriptada entre tu dispositivo e internet. Funciona redirigiendo tu tráfico de internet a través de un servidor remoto, lo que oculta tu dirección IP y protege tu actividad en línea.
 
 ### ¿Cómo usar una VPN en Netfree?
@@ -243,7 +243,7 @@ Para más información, puedes usar los comandos en la lista o contactarme direc
 Con esto, puedes tener una mejor experiencia Netfree protegiendo tu privacidad y accediendo a internet gratuitamente en ciertos proveedores.`);
                 break;
 
-            case '.prx':
+            case 'prx':
                 message.reply(`Configurar un **proxy** para Netfree es un proceso que te permite acceder a internet sin gastar datos, utilizando servidores específicos y ajustando ciertos parámetros en tu dispositivo.
 
 ### Pasos para configurar un proxy en Netfree:
@@ -265,7 +265,7 @@ Con esto, puedes tener una mejor experiencia Netfree protegiendo tu privacidad y
 Siguiendo estos pasos, puedes configurar un proxy y disfrutar de la conexión Netfree en tu red móvil.`);
                 break;
 
-            case '.blq':
+            case 'blq':
                 message.reply(`Para evitar **bloqueos** en Netfree, es esencial aplicar varios métodos y buenas prácticas que ayudan a mantener la conexión estable y sin restricciones:
 
 1. **Cambiar de proxy con frecuencia**:
@@ -290,7 +290,7 @@ Siguiendo estos pasos, puedes configurar un proxy y disfrutar de la conexión Ne
    - Mantente informado sobre bloqueos o nuevas soluciones a través de comunidades en línea dedicadas a Netfree, como grupos de Telegram o foros.`);
                 break;
 
-            case '.dev':
+            case 'dev':
                 message.reply(`**Netfree** puede funcionar en una gran variedad de dispositivos, pero la compatibilidad y el rendimiento pueden depender de varios factores:
 
 1. **Teléfonos móviles**:
