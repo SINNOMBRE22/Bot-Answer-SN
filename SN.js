@@ -19,7 +19,7 @@ client.on('qr', (qr) => {
 client.on('ready', () => {
     console.log('El bot está listo y conectado a WhatsApp');
 
-    // Programar el envío del mensaje cada 12 horas (43200000 milisegundos)
+    // Programar el envío del mensaje cada 2 horas (7200000 milisegundos)
     setInterval(async () => {
         const chats = await client.getChats(); // Obtener todos los chats
 
@@ -82,98 +82,29 @@ _Si no conecta, te damos una nueva._
                 `);
             }
         });
-    }, 43200000); // 43200000 ms = 12 horas
+    }, 43200000); // 7200000 ms = 2 horas
 });
 
 // Escuchar mensajes entrantes y responder con comandos específicos
 client.on('message', async message => {
     const msg = message.body.toLowerCase().trim(); // Normaliza el mensaje
 
-    // Verifica si el mensaje empieza con el prefijo '$'
-    if (msg.startsWith('.')) {
-        // Eliminar el prefijo para obtener el comando
-        const command = msg.slice(1);
-
-        // Comprobar si el comando es '.publi'
-        switch (command) {
-            case 'publi':
-                // Enviar el mensaje de publicidad a todos los grupos
-                try {
-                    const chats = await client.getChats(); // Obtener todos los chats
-                    chats.forEach(chat => {
-                        if (chat.isGroup) { // Verificar si es un grupo
-                            client.sendMessage(chat.id._serialized, `
-━━━━━━━━━━━━━━━━━━━━
-🌐✨ *SinNombre VPS* 🇲🇽✨
-━━━━━━━━━━━━━━━━━━━━
-> 💰 **PRECIOS:**
-➥ *$110* : VPS 60 días (5 usuarios)
-➥ *$60* : VPS 30 días (2 usuarios)
-➥ *$30* : VPS 15 días ( 2 usuarios)
-➥ *$15* : VPS 1 semana (1 usuario)
-
-━━━━━━━━━━━━━━━━━━━━
-> 📡 **COMPAÑÍAS MX**:
-🚀 _*Dirí sin saldo (velocidad lenta)*_
-🚀 _*Movistar Redes*_
-🚀 _*Bait sin saldo (velocidad lenta)*_
-🚀 _*Bait redes*_
-🚀 _*BAIT CONGELA*_
-🚀 _*Redicoopel redes*_
-🚀 _*Yolteco redes*_
-🚀 _*WEEX redes*_
-🚀 _*Virgin redes*_
-🚀 _*at&t sin saldo*_
-🚀 _*at&t redes*_
-🚀 _*Altan SinSaldo (velocidad lenta)*_
-🚀 _*OTRAS COMPAÑÍAS DISPONIBLES*_
-
-💡 _𝙋𝙖𝙧𝙖 𝙤𝙩𝙧𝙤𝙨 𝙥𝙖𝙞𝙨𝙚𝙨, 𝙨𝙤𝙡𝙤 𝙥𝙧𝙚𝙜𝙪𝙣𝙩𝙖._
-
-━━━━━━━━━━━━━━━━━━━━
-> **VENTAJAS DE NUESTROS SERVIDORES**:
-💻 *NAVEGACIÓN LIBRE*
-⚡️ *CONEXIÓN RÁPIDA*
-🎮 *SOPORTE PARA JUEGOS ONLINE*
-📲 *VIDEOLLAMADAS SIN PROBLEMAS*
-🛡️ *CONEXIÓN ESTABLE (ANTI-DESCONECTAR)*
-🚀 *SERVIDOR ESTABLE Y SIN ERRORES*
-♻️ *GARANTÍA 100%*
-
-> 🌕 _VENCE EN 1 MES (SOLICITUD FLEXIBLE)_
-
-> 📍 *CONFIGURACIÓN GARANTIZADA*: 
-_Si no conecta, te damos una nueva._
-
-━━━━━━━━━━━━━━━━━━━━
-> 💳 **MÉTODOS DE PAGO**:
-✔️ *Mercado pago* • *transferencia* • *oxxo*
-
-━━━━━━━━━━━━━━━━━━━━
-💈 [Soporte](wa.me/+5215629885039)
-
-━━━━━━━━━━━━━━━━━━━━
-🚀 **¡ORDENA YA!**
-> 👉 _Haz clic aquí para más información:_ https://wa.me/message/BSE4ZCEPY7ZOP1
-━━━━━━━━━━━━━━━━━━━━
-                            `);
-                        }
-                    });
-                } catch (error) {
-                    console.error('Error al enviar el mensaje de publicidad:', error);
-                }
-                break;
-
-            default:
-                // Ignorar comandos no reconocidos
+       // Ignorar comandos no reconocidos
                 break;
         }
     } else {
-        // Manejo de otros comandos
-        switch (msg) {
+        // Comandos generales con prefijo '$'
+        if (!msg.startsWith('.')) {
+            return; // Ignorar mensajes que no comiencen con el prefijo '$'
+        }
+
+        // Eliminar el prefijo para obtener el comando
+        const command = msg.slice(1);
+
+        // Comprobar si el mensaje es un comando específico
+        switch (command) {
             case 'menu':
             case 'menú':
-                
                 message.reply(`======================== 
    🌐 𝓢𝓲𝓷𝓝𝓸𝓶𝓫𝓻𝓮 𝓑𝓸𝓽 - 𝓜𝓮𝓷𝓾 𝓟𝓻𝓲𝓷𝓬𝓲𝓹𝓪𝓵 🌐
 ======================== 
