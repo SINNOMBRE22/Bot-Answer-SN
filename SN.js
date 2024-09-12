@@ -342,7 +342,6 @@ Siguiendo estos pasos, puedes configurar un proxy y disfrutar de la conexión Ne
                 // Ignorar comandos no reconocidos
                 break;
         }
-    }
 });
 
 // Iniciar el cliente
