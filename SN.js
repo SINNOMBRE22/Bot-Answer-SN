@@ -333,8 +333,19 @@ Siguiendo estos pasos, puedes configurar un proxy y disfrutar de la conexión Ne
                     message.reply(`Actualización completa, pero con advertencias: ${stderr}`);
                     return;
                 }
+
                 console.log(`stdout: ${stdout}`);
                 message.reply('El bot ha sido actualizado exitosamente.');
+
+                // Reiniciar el bot con PM2
+                exec('pm2 restart mi-bot', (error) => {
+                    if (error) {
+                        console.error(`Error al reiniciar el bot: ${error.message}`);
+                        message.reply('Hubo un error al reiniciar el bot.');
+                    } else {
+                        message.reply('El bot ha sido reiniciado exitosamente.');
+                    }
+                });
             });
             break;
 
