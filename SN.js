@@ -333,7 +333,6 @@ https://chat.whatsapp.com/EcMClegA2DVBZRiudPqYqP
             } else {
                 message.reply('♻️ El bot ha sido reiniciado exitosamente. Espere unos segundos.');
             }
-        });
     });
 }
 
