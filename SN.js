@@ -90,20 +90,25 @@ const { exec } = require('child_process'); // Importar el módulo para ejecutar 
 
 // Escuchar mensajes entrantes y responder con comandos específicos
 client.on('message', async message => {
+    // Verificar si el mensaje es de un grupo y si es así, ignorarlo
+    if (message.isGroupMsg) {
+        return; // Ignorar mensajes que provengan de grupos
+    }
+
     const msg = message.body.toLowerCase().trim(); // Normaliza el mensaje
 
-       // Comandos generales con prefijo '$'
-        if (!msg.startsWith('$')) {
-            return; // Ignorar mensajes que no comiencen con el prefijo '$'
-        }
+    // Comandos generales con prefijo '$'
+    if (!msg.startsWith('$')) {
+        return; // Ignorar mensajes que no comiencen con el prefijo '$'
+    }
 
-        // Eliminar el prefijo para obtener el comando
-        const command = msg.slice(1);
+    // Eliminar el prefijo para obtener el comando
+    const command = msg.slice(1);
 
-        // Comprobar si el mensaje es un comando específico
-        switch (command) {
-            case 'menu':
-            case 'menú':
+    // Comprobar si el mensaje es un comando específico
+    switch (command) {
+        case 'menu':
+        case 'menú':
                 message.reply(`======================== 
    🌐 𝓢𝓲𝓷𝓝𝓸𝓶𝓫𝓻𝓮 𝓑𝓸𝓽 - 𝓜𝓮𝓷𝓾 𝓟𝓻𝓲𝓷𝓬𝓲𝓹𝓪𝓵 🌐
 ======================== 
