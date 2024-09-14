@@ -283,7 +283,7 @@ $6] 𝗚𝗥𝗨𝗣𝗢𝗦 𝗡𝗘𝗧𝗙𝗥𝗘𝗘✓
 ━━━━━━━━━━━━━━━━━━━━━━`);
                     break;
             
-                case '5':
+                case '6':
                 message.reply(`━━━━━━━━━━━━━━━━━━━━━━
    🌐 𝙎𝙞𝙣𝙉𝙤𝙢𝙗𝙧𝙚 𝘽𝙊𝙏🌐
 ━━━━━━━━━━━━━━━━━━━━━━
@@ -307,23 +307,23 @@ https://chat.whatsapp.com/EcMClegA2DVBZRiudPqYqP
      `);
                     break;
     case 'actualizar':
-            message.reply('Actualizando el bot...');
+            message.reply('🔄Actualizando el bot...');
 
             // Ejecutar el comando `git pull` para actualizar el bot
             exec('git pull', (error, stdout, stderr) => {
                 if (error) {
                     console.error(`Error durante la actualización: ${error.message}`);
-                    message.reply('Hubo un error al actualizar el bot.');
+                    message.reply('❌Hubo un error al actualizar el bot.');
                     return;
                 }
                 if (stderr) {
                     console.error(`stderr: ${stderr}`);
-                    message.reply(`Actualización completa, pero con advertencias..... actualizar de nuevo: ${stderr}`);
+                    message.reply(`⚠️Actualización completa, pero con advertencias..... actualizar de nuevo: ${stderr}`);
                     return;
                 }
 
                 console.log(`stdout: ${stdout}`);
-                message.reply('El bot ha sido actualizado exitosamente.');
+                message.reply('✅El bot ha sido actualizado exitosamente.');
 
                 // Reiniciar el bot con PM2
                 exec('pm2 restart mi-bot', (error) => {
@@ -331,7 +331,7 @@ https://chat.whatsapp.com/EcMClegA2DVBZRiudPqYqP
                         console.error(`Error al reiniciar el bot: ${error.message}`);
                         message.reply('Hubo un error al reiniciar el bot.');
                     } else {
-                        message.reply('El bot ha sido reiniciado exitosamente..... espere unos segundos');
+                        message.reply('♻️El bot ha sido reiniciado exitosamente..... espere unos segundos');
                     }
                 });
             });
