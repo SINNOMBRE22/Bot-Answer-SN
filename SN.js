@@ -342,7 +342,6 @@ https://chat.whatsapp.com/EcMClegA2DVBZRiudPqYqP
             });
         });
     }
-});
 
 // Iniciar el cliente
 client.initialize();
