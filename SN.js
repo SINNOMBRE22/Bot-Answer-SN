@@ -37,9 +37,9 @@ client.on('ready', () => {
 
 ━━━━━━━━━━━━━━━━━━━━
 > 📡 **COMPAÑÍAS MX**:
-🚀 _*Dirí sin saldo (velocidad lenta)*_
+🚀 _*Dirí sin saldo*_
 🚀 _*Movistar Redes*_
-🚀 _*Bait sin saldo (velocidad lenta)*_
+🚀 _*Bait sin saldo*_
 🚀 _*Bait redes*_
 🚀 _*BAIT CONGELA*_
 🚀 _*Redicoopel redes*_
@@ -48,7 +48,7 @@ client.on('ready', () => {
 🚀 _*Virgin redes*_
 🚀 _*at&t sin saldo*_
 🚀 _*at&t redes*_
-🚀 _*Altan SinSaldo (velocidad lenta)*_
+🚀 _*Altan SinSaldo*_
 🚀 _*OTRAS COMPAÑÍAS DISPONIBLES*_
 
 💡 _𝙋𝙖𝙧𝙖 𝙤𝙩𝙧𝙤𝙨 𝙥𝙖𝙞𝙨𝙚𝙨, 𝙨𝙤𝙡𝙤 𝙥𝙧𝙚𝙜𝙪𝙣𝙩𝙖._
@@ -172,149 +172,140 @@ $6] 𝗚𝗥𝗨𝗣𝗢𝗦 𝗡𝗘𝗧𝗙𝗥𝗘𝗘✓
                 break;
 
             case '2':
-                message.reply(`========================
-➣ 𝗗𝘂𝗱𝗮𝘀 𝗦𝗼𝗯𝗿𝗲 𝗡𝗲𝘁𝗳𝗿𝗲𝗲
-========================
+                message.reply(`🌐✨ *SinNombre VPS* 🇲🇽✨
+━━━━━━━━━━━━━━━━━━━━
+> 💰 **PRECIOS:**
+➥ *$110* : VPS 60 días (5 usuarios)
+➥ *$60* : VPS 30 días (2 usuarios)
+➥ *$30* : VPS 15 días ( 2 usuarios)
+➥ *$15* : VPS 1 semana (1 usuario)
 
-1️⃣ cfg) ¿Cómo configurar para tener netfree?
-2️⃣ vpn) ¿Qué es VPN y cómo usarla en Netfree?
-3️⃣ prx) ¿Cómo configurar un proxy en Netfree?
-4️⃣ blq) ¿Cómo evitar bloqueos en Netfree?
-5️⃣ dev) ¿Netfree funciona en todos los dispositivos?
-6️⃣ app) ¿Existen apps específicas para Netfree?
-7️⃣ spd) ¿Cómo mejorar la velocidad con Netfree?
-8️⃣ acc) ¿Cómo crear cuentas en Netfree?
-9️⃣ comp) ¿Netfree es compatible con mi operador?
-🔟 err) ¿Qué hacer si Netfree no se conecta?
-========================`);
+━━━━━━━━━━━━━━━━━━━━`);
                 break;
-
-            case 'cfg':
-                message.reply(`Para configurar Netfree (navegación gratuita en internet usando VPNs o proxies), hay varias opciones y pasos a seguir, dependiendo del método que prefieras. Aquí te doy una guía básica para tener Netfree:
-
-1. **Configuración con VPN**:
-   - Descarga una aplicación VPN como **Psiphon**, **HTTP Injector**, o **NapsternetV**.
-   - Busca servidores o configuraciones VPN Netfree específicas para tu país y proveedor.
-   - Carga el archivo de configuración (con extensión ".ehi" o ".nsv") en la app.
-   - Activa la VPN para empezar a navegar gratis.
-
-2. **Configuración con Proxy**:
-   - Accede a la configuración de tu teléfono o computadora.
-   - En **Redes y Conexiones**, busca **Configuración de Proxy**.
-   - Inserta el **proxy gratuito** y el **puerto** que funcione con tu operador.
-   - Guarda los cambios y navega.
-
-3. **Usar una APN modificada**:
-   - Ve a **Configuraciones > Redes móviles > Nombres de puntos de acceso (APN)**.
-   - Crea un nuevo APN con los siguientes valores:
-     - **Nombre**: Cualquier nombre
-     - **APN**: El APN que funcione en tu región (búscalo según tu país).
-     - **Proxy y Puerto**: Si se requiere.
-
-4. **Uso de HTTP Injector**:
-   - Descarga la app HTTP Injector.
-   - Busca archivos de configuración (.ehi) para tu proveedor de red.
-   - Carga el archivo en la app.
-   - Conecta y empieza a navegar.
-
-### Consejos adicionales:
-- Asegúrate de buscar servidores y archivos de configuración específicos para tu país y operador.
-- Si uno no funciona, prueba diferentes configuraciones y proxies.`);
-                break;
-
-            case 'vpn':
-                message.reply(`Una **VPN** (Red Privada Virtual, por sus siglas en inglés) es una tecnología que permite crear una conexión segura y encriptada entre tu dispositivo e internet. Funciona redirigiendo tu tráfico de internet a través de un servidor remoto, lo que oculta tu dirección IP y protege tu actividad en línea.
-
-### ¿Cómo usar una VPN en Netfree?
-
-1. **Descargar una aplicación VPN**: 
-   - Algunas aplicaciones populares para Netfree incluyen **Psiphon**, **HTTP Injector**, y **NapsternetV**.
-   - Estas aplicaciones permiten conexiones Netfree a través de servidores configurados especialmente para ello.
-
-2. **Configurar la VPN**:
-   - Una vez instalada la aplicación, debes cargar una configuración o archivo específico para Netfree. Este archivo (.ehi, .nsv o configuración manual) contiene los ajustes para la red y el país en el que te encuentras.
-   - Activa la VPN y espera que se conecte al servidor.
-
-3. **Beneficios de usar VPN en Netfree**:
-   - **Privacidad**: Tu actividad en línea es encriptada y tu dirección IP se oculta.
-   - **Acceso gratuito**: En muchos países, las VPNs pueden habilitar acceso gratuito a internet en ciertas redes móviles.
-
-
-Con esto, puedes tener una mejor experiencia Netfree protegiendo tu privacidad y accediendo a internet gratuitamente en ciertos proveedores.`);
-                break;
-
-            case 'prx':
-                message.reply(`Configurar un **proxy** para Netfree es un proceso que te permite acceder a internet sin gastar datos, utilizando servidores específicos y ajustando ciertos parámetros en tu dispositivo.
-
-### Pasos para configurar un proxy en Netfree:
-
-1. **Conseguir una dirección de proxy**:
-   - Encuentra un proxy que funcione con tu operador móvil. Estos proxies pueden ser gratuitos o de pago, y algunos se publican en foros o grupos dedicados a Netfree.
-
-2. **Configurar el proxy en tu dispositivo móvil**:
-   - Ve a la configuración de **Redes** en tu dispositivo.
-   - Selecciona la opción de **Redes Móviles** o **Conexiones** y busca la configuración de **Punto de acceso (APN)**.
-   - En el campo de **Proxy** introduce la dirección del proxy y en el campo **Puerto**, introduce el número correspondiente (por ejemplo, 80 o 8080).
-
-3. **Utilizar aplicaciones de inyección**:
-   - Para una configuración más avanzada y estable, puedes usar aplicaciones como **HTTP Injector**, **KPN Tunnel**, o **HTTP Custom**. Estas aplicaciones permiten configurar el proxy junto con otros parámetros como cabeceras HTTP, lo que facilita la conexión.
-
-4. **Archivos de configuración**:
-   - Algunos servidores Netfree requieren que cargues un archivo de configuración (.ehi, .hpi, .nsv) en estas aplicaciones para conectar correctamente al proxy. Estos archivos contienen las cabeceras y ajustes específicos.
-
-Siguiendo estos pasos, puedes configurar un proxy y disfrutar de la conexión Netfree en tu red móvil.`);
-                break;
-
-            case 'blq':
-                message.reply(`Para evitar **bloqueos** en Netfree, es esencial aplicar varios métodos y buenas prácticas que ayudan a mantener la conexión estable y sin restricciones:
-
-1. **Cambiar de proxy con frecuencia**:
-   - Los proxies pueden saturarse o ser bloqueados por los proveedores de servicio. Cambiar a otro proxy funcional y actualizado es una estrategia efectiva para evitar bloqueos.
-
-2. **Usar VPN y SSH**:
-   - Las **VPNs** cifran el tráfico y ocultan tu conexión, lo que ayuda a evitar detecciones y bloqueos. Configurar conexiones **SSH** puede mejorar la estabilidad y seguridad.
-
-3. **Usar headers HTTP personalizados**:
-   - Algunos operadores bloquean conexiones al detectar patrones comunes. Las aplicaciones como **HTTP Injector** o **KPN Tunnel** permiten personalizar los headers HTTP, lo que hace que el tráfico sea menos detectable.
-
-4. **Cambiar de APN**:
-   - Si un **APN** es bloqueado, puedes probar con otros APNs alternativos que funcionen con tu operador.
-
-5. **Actualizar archivos de configuración**:
-   - Los archivos de configuración (.ehi, .kpn, .nsv) deben estar actualizados con nuevos parámetros para evitar bloqueos por parte de los servidores o del ISP.
-
-6. **Revisar la saturación de servidores**:
-   - Evita conectar a servidores que estén saturados o caídos, ya que esto podría causar bloqueos temporales o interrupciones.
-
-7. **Monitorear las redes sociales o foros**:
-   - Mantente informado sobre bloqueos o nuevas soluciones a través de comunidades en línea dedicadas a Netfree, como grupos de Telegram o foros.`);
-                break;
-
-            case 'dev':
-                message.reply(`**Netfree** puede funcionar en una gran variedad de dispositivos, pero la compatibilidad y el rendimiento pueden depender de varios factores:
-
-1. **Teléfonos móviles**:
-   - **Android**: Es compatible con múltiples aplicaciones de inyección de proxy, VPN y SSH, como **HTTP Injector**, **KPN Tunnel** y **Psiphon**.
-   - **iOS**: Puede ser más limitado debido a restricciones de apps, pero con la configuración correcta de VPN o proxy, Netfree puede funcionar.
-
-2. **Computadoras**:
-   - **Windows y Linux**: Puede configurarse mediante **proxy** o **VPN**. Utilizar aplicaciones como **Proxifier** o el propio cliente de **OpenVPN** permite acceso Netfree en sistemas operativos de escritorio.
-   
-3. **Tabletas y otros dispositivos móviles**: 
-   - Funcionan igual que en teléfonos, siempre que sea posible instalar aplicaciones compatibles de VPN o proxy.
-
-4. **Routers**: 
-   - Algunos routers con configuraciones avanzadas permiten usar VPN o túneles SSH, lo que habilita Netfree en toda la red.`);
-                break;
-                
+            
             case '3':
-                message.reply(`Para contactar con nosotros, por favor envía un correo a soporte@ejemplo.com o llama al 123-456-7890`);
+                message.reply(`━━━━━━━━━━━━━━━━━━━━━━
+   🌐 𝙎𝙞𝙣𝙉𝙤𝙢𝙗𝙧𝙚 𝘽𝙊𝙏🌐
+━━━━━━━━━━━━━━━━━━━━━━
+> 📡 **𝘾𝙊𝙈𝙋𝘼𝙉̃𝙄𝘼𝙎 𝙈𝙓**:
+➣ _*Dirí sin saldo*_
+➣ _*Movistar Redes*_
+➣ _*Bait sin saldo*_
+➣ _*Bait redes*_
+➣ _*BAIT CONGELA*_
+➣ _*Redicoopel redes*_
+➣ _*Yolteco redes*_
+➣ _*WEEX redes*_
+➣ _*Virgin redes*_
+➣ _*at&t sin saldo*_
+➣ _*at&t redes*_
+➣ _*Altan SinSaldo*_
+➣ _*Simpn Redes*_
+➣ _*CFE Sin Saldo*_
+➣ _*Bienestar Sin Saldo*_
+
+🧐_𝗦𝗶 𝗘𝗿𝗲𝘀 𝗗𝗲 𝗢𝘁𝗿𝗼 𝗣𝗮𝗶𝘀 𝗣𝗿𝗲𝗴𝘂𝗻𝘁𝗮._
+     ➥𝘗𝘢𝘪𝘴 𝘠 𝘊𝘰𝘮𝘱𝘢𝘯̃𝘪𝘢 𝘱𝘰𝘳𝘧𝘢𝘷𝘰𝘳
+━━━━━━━━━━━━━━━━━━━━━━`);
                 break;
 
             case '4':
-                message.reply('Gracias por usar el bot. ¡Hasta luego!');
+                message.reply(`━━━━━━━━━━━━━━━━━━━━━━
+   🌐 𝙎𝙞𝙣𝙉𝙤𝙢𝙗𝙧𝙚 𝘽𝙊𝙏🌐
+━━━━━━━━━━━━━━━━━━━━━━
+ ➣ 𝙏𝙄𝙋𝙊 𝘿𝙀 𝙀𝙉 𝙐𝙎𝙊 𝙈𝙀𝙏𝙊𝘿𝙊𝙎 
+     ➥   𝘚𝘚𝘓
+     ➥  𝘗𝘚𝘐𝘗𝘏𝘖𝘕     
+     ➥  𝘝2𝘙𝘈𝘠 (𝘍𝘈𝘚𝘛𝘓𝘠)
+     ➥  𝘜𝘋𝘗 𝘊𝘜𝘚𝘛𝘖𝘔
+     ➥  𝘏𝘺𝘴𝘵𝘦𝘳𝘪𝘢 𝘜𝘋𝘗
+     ➥  𝘡𝘐𝘗 𝘜𝘋𝘗
+     ➥  𝘊𝘓𝘖𝘜𝘍𝘙𝘖𝘕𝘛
+━━━━━━━━━━━━━━━━━━━━━━`);
                 break;
+            case '5':
+            message.reply(`━━━━━━━━━━━━━━━━━━━━━━
+   🌐 𝙎𝙞𝙣𝙉𝙤𝙢𝙗𝙧𝙚 𝘽𝙊𝙏🌐
+━━━━━━━━━━━━━━━━━━━━━━
+➣   𝙎𝙚𝙧𝙫𝙞𝙙𝙤𝙧𝙚𝙨 𝙑𝙋𝙎
 
+➣   𝙈𝙚𝙩𝙤𝙙𝙤𝙨
+       ➥𝘔𝘦𝘵𝘰𝘥𝘰 𝘍𝘢𝘴𝘵𝘭𝘺
+       ➥𝘏𝘰𝘴𝘵
+       ➥𝘊𝘭𝘰𝘶𝘧𝘳𝘰𝘯𝘵
+       ➥𝘗𝘢𝘺𝘭𝘰𝘢𝘥𝘴
+
+➣    𝙈𝙖𝙦𝙪𝙞𝙣𝙖𝙨 𝘾𝙤𝙣𝙛𝙞𝙜𝙪𝙧𝙖𝙙𝙖𝙨
+
+➣   𝙣𝙪𝙢𝙚𝙧𝙤𝙨 𝙫𝙞𝙧𝙩𝙪𝙖𝙡𝙚𝙨 (+52 81)
+
+➣   𝙈𝙚𝙩𝙤𝙙𝙤𝙨 𝘿𝙚 𝙚𝙙𝙞𝙘𝙞𝙤𝙣 𝘿𝙊𝘾...(𝘱𝘢𝘤𝘬)
+        ➥ 𝘈𝘤𝘵𝘢𝘴
+        ➥ 𝘊𝘦𝘳𝘵𝘪𝘧𝘪𝘤𝘢𝘥𝘰
+        ➥ 𝘊𝘰𝘮𝘱𝘳𝘰𝘣𝘢𝘯𝘵𝘦𝘴 𝘋𝘦 𝘋𝘰𝘮𝘪𝘤𝘪𝘭𝘪𝘰
+        ➥ 𝘌𝘴𝘵𝘢𝘥𝘰𝘴 𝘋𝘦 𝘊𝘶𝘦𝘯𝘵𝘢
+        ➥ 𝘍𝘢𝘤𝘵𝘶𝘳𝘢𝘴
+        ➥ 𝘎𝘰𝘣 (𝘢𝘯𝘵𝘦𝘴𝘦𝘥𝘦𝘯𝘵𝘦𝘴 𝘯𝘰 𝘱𝘦𝘯𝘢𝘭𝘦𝘴(2)
+        𝘐𝘯𝘤𝘳𝘪𝘱𝘤𝘪𝘰𝘯 𝘙𝘍𝘊
+        ➥ 𝘐𝘥𝘦𝘯𝘵𝘪𝘧𝘪𝘤𝘢𝘴𝘪𝘰𝘯𝘦𝘴
+        ➥ 𝘓𝘪𝘤𝘦𝘯𝘤𝘪𝘢𝘴
+        ➥ 𝘔𝘦𝘥𝘪𝘤𝘰𝘴
+        ➥ 𝘛𝘢𝘳𝘫𝘦𝘵𝘢𝘴
+        ➥ 𝘛𝘳𝘢𝘯𝘴𝘧𝘦𝘳𝘦𝘯𝘤𝘪𝘢𝘴
+
+➣   𝘿𝙚𝙨𝙖𝙧𝙧𝙤𝙡𝙡𝙤 𝙒𝙚𝙗 𝘾𝙤𝙢𝙥𝙡𝙚𝙩𝙤
+        ➥ 𝘏𝘵𝘮𝘭5
+        ➥ 𝘜𝘥𝘦𝘮𝘪
+        ➥ 𝘋𝘦𝘴𝘢𝘳𝘳𝘰𝘭𝘭𝘰 𝘞𝘦𝘣
+        ➥ 𝘊𝘴𝘴3
+        ➥ 𝘗𝘩𝘱
+        ➥ 𝘔𝘺𝘚𝘘𝘓
+       
+➣   𝘾𝙪𝙧𝙨𝙤𝙨 𝙘𝙤𝙢𝙥𝙡𝙚𝙩𝙤𝙨
+        ➥ 𝘗𝘺𝘵𝘩𝘰𝘯
+        
+➣   𝗟𝗨𝗔𝗦
+       ➥ 𝘗𝘢𝘺𝘭𝘰𝘢𝘥𝘴
+       ➥ 𝘝2𝘳𝘢𝘺
+       ➥ 𝘚𝘚𝘓
+       ➥ 𝘉𝘢𝘯𝘯𝘦𝘳
+       ➥ 𝘚𝘭𝘰𝘸𝘋𝘯𝘴
+       ➥ 𝘦𝘵𝘤
+       
+➣   𝘾𝙪𝙧𝙨𝙤𝙨 𝘿𝙚 𝙉𝙚𝙩𝙛𝙧𝙚𝙚
+       ➥ 𝘋𝘦𝘴𝘥𝘦 𝘭𝘰 𝘣𝘢𝘴𝘪𝘤𝘰 
+       ➥ 𝘈𝘴𝘵𝘢 𝘭𝘰 𝘊𝘰𝘮𝘱𝘭𝘦𝘫𝘰
+
+➣   𝙎𝙘𝙧𝙮𝙥𝙩
+       ➥ 𝘴𝘤𝘳𝘪𝘱𝘵 𝘴𝘪𝘮𝘱𝘭𝘦 𝘵𝘦𝘴𝘵𝘦𝘰 (𝘩𝘰𝘴𝘵)
+       ➥𝘴𝘤𝘳𝘪𝘱𝘵 𝘵𝘦𝘴𝘵𝘦𝘰 𝘤𝘰𝘮𝘱𝘭𝘦𝘵𝘰
+       
+━━━━━━━━━━━━━━━━━━━━━━`);
+                    break;
+            
+                case '4':
+                message.reply(`━━━━━━━━━━━━━━━━━━━━━━
+   🌐 𝙎𝙞𝙣𝙉𝙤𝙢𝙗𝙧𝙚 𝘽𝙊𝙏🌐
+━━━━━━━━━━━━━━━━━━━━━━
+ ➣    𝙂𝙧𝙪𝙥𝙤𝙨 𝘿𝙚 𝙒𝙝𝙖𝙩𝙨𝙖𝙥𝙥 𝙈𝙓
+     ➥ 𝘚𝘪𝘯𝘕𝘰𝘮𝘣𝘳𝘦-𝘕𝘦𝘵𝘧𝘳𝘦𝘦
+ https://chat.whatsapp.com/Hlbkk1RKvsNF6LV9oeYgbO
+ 
+     ➥   ㅤ
+ https://chat.whatsapp.com/LDu73GSj9qT17GHMYtIPOg
+ 
+ ➣           𝙂𝙧𝙪𝙥𝙤 𝘿𝙚 𝙒𝙝𝙖𝙩𝙨𝙖𝙥𝙥 
+ 
+  ✍︎✍︎𝘚𝘪 𝘕𝘰 𝘌𝘳𝘦𝘴 𝘋𝘦 𝘔𝘦𝘹𝘪𝘤𝘰 𝘌𝘯𝘵𝘳𝘢 𝘈𝘲𝘶𝘪✍︎✍︎
+ ✍︎✍︎𝘋𝘦 𝘓𝘰 𝘊𝘰𝘯𝘵𝘳𝘢𝘳𝘪𝘰 𝘌𝘭 𝘉𝘰𝘵 𝘛𝘦 𝘌𝘭𝘪𝘮𝘪𝘯𝘢𝘳𝘢✍︎✍︎
+ 
+     ➥  𝘚𝘪𝘯𝘕𝘰𝘮𝘣𝘳𝘦-𝘓𝘈𝘛𝘈𝘔-𝘚𝘌𝘙𝘝𝘌𝘙𝘚
+https://chat.whatsapp.com/EcMClegA2DVBZRiudPqYqP
+━━━━━━━━━━━━━━━━━━━━━━ 
+𝙉𝙊 𝙊𝙇𝙑𝙄𝘿𝙀𝙎 𝙋𝙍𝙀𝙎𝙀𝙉𝙏𝘼𝙍𝙏𝙀
+━━━━━━━━━━━━━━━━━━━━━━ 
+     `);
+                    break;
                 case 'actualizar':
             message.reply('Actualizando el bot...');
 
