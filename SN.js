@@ -339,8 +339,3 @@ https://chat.whatsapp.com/EcMClegA2DVBZRiudPqYqP
 
 // Iniciar el cliente
 client.initialize();
-
-// Aviso de activación una vez que el bot esté listo después del reinicio
-client.on('ready', () => {
-    message.reply('🚀 El bot se ha activado nuevamente y está listo para usar.');
-});
