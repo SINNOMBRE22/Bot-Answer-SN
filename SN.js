@@ -359,6 +359,3 @@ Siguiendo estos pasos, puedes configurar un proxy y disfrutar de la conexión Ne
                 break;
         }
 });
-
-// Iniciar el cliente
-client.initialize();
