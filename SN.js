@@ -335,7 +335,7 @@ Siguiendo estos pasos, puedes configurar un proxy y disfrutar de la conexión Ne
                 }
                 if (stderr) {
                     console.error(`stderr: ${stderr}`);
-                    message.reply(`Actualización completa, pero con advertencias: ${stderr}`);
+                    message.reply(`Actualización completa, pero con advertencias..... actualizar de nuevo: ${stderr}`);
                     return;
                 }
 
