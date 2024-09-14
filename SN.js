@@ -306,42 +306,43 @@ https://chat.whatsapp.com/EcMClegA2DVBZRiudPqYqP
 ━━━━━━━━━━━━━━━━━━━━━━ 
      `);
                     break;
-                case 'actualizar':
-            message.reply('Actualizando el bot...');
+    // Verificar si el mensaje es un comando específico (ej: "$actualizar")
+    if (msg === '$actualizar') {
+        message.reply('🔄 Actualizando el bot...');
 
-            // Ejecutar el comando `git pull` para actualizar el bot
-            exec('git pull', (error, stdout, stderr) => {
+        // Ejecutar el comando `git pull` para actualizar el bot
+        exec('git pull', (error, stdout, stderr) => {
+            if (error) {
+                console.error(`Error durante la actualización: ${error.message}`);
+                message.reply('❌ Hubo un error al actualizar el bot.');
+                return;
+            }
+            if (stderr) {
+                console.error(`stderr: ${stderr}`);
+                message.reply(`⚠️ Actualización completa, pero con advertencias: ${stderr}`);
+                return;
+            }
+
+            console.log(`stdout: ${stdout}`);
+            message.reply('✅ El bot ha sido actualizado exitosamente.');
+
+            // Reiniciar el bot con PM2
+            exec('pm2 restart mi-bot', (error) => {
                 if (error) {
-                    console.error(`Error durante la actualización: ${error.message}`);
-                    message.reply('Hubo un error al actualizar el bot.');
-                    return;
-                }
-                if (stderr) {
-                    console.error(`stderr: ${stderr}`);
-                    message.reply(`Actualización completa, pero con advertencias..... actualizar de nuevo: ${stderr}`);
-                    return;
-                }
+                    console.error(`Error al reiniciar el bot: ${error.message}`);
+                    message.reply('❌ Hubo un error al reiniciar el bot.');
+                } else {
+                    message.reply('♻️ El bot ha sido reiniciado exitosamente. Espere unos segundos...');
 
-                console.log(`stdout: ${stdout}`);
-                message.reply('El bot ha sido actualizado exitosamente.');
-
-                // Reiniciar el bot con PM2
-                exec('pm2 restart mi-bot', (error) => {
-                    if (error) {
-                        console.error(`Error al reiniciar el bot: ${error.message}`);
-                        message.reply('Hubo un error al reiniciar el bot.');
-                    } else {
-                        message.reply('El bot ha sido reiniciado exitosamente..... espere unos segundos');
-                    }
-                });
+                    // Aviso de activación una vez que el bot esté listo después del reinicio
+                    client.on('ready', () => {
+                        message.reply('🚀 El bot se ha activado nuevamente y está listo para usar.');
+                    });
+                }
             });
-            break;
-
-        default:
-                // Ignorar comandos no reconocidos
-                break;
-        }
+        });
+    }
 });
+
 // Iniciar el cliente
 client.initialize();
-
