@@ -347,5 +347,12 @@ client.initialize();
 
 // Aviso de activación una vez que el bot esté listo después del reinicio
 client.on('ready', () => {
-    message.reply('🚀 El bot se ha activado nuevamente y está listo para usar.');
+    // Verifica si `message` está disponible. Si no lo está, puedes enviar el mensaje a un canal específico
+    if (typeof message !== 'undefined') {
+        message.reply('🚀 El bot se ha activado nuevamente y está listo para usar.');
+    } else {
+        console.log('🚀 El bot se ha activado nuevamente y está listo para usar.');
+        // Alternativamente, podrías enviar un mensaje a un canal específico si `message` no está disponible
+        // client.channels.cache.get('CHANNEL_ID').send('🚀 El bot se ha activado nuevamente y está listo para usar.');
+    }
 });
