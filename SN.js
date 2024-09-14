@@ -98,7 +98,7 @@ client.on('message', async message => {
     const msg = message.body.toLowerCase().trim(); // Normaliza el mensaje
 
     // Comandos generales con prefijo '/'
-    if (!msg.startsWith('/')) {
+    if (!msg.startsWith(',')) {
         return; // Ignorar mensajes que no comiencen con el prefijo '$'
     }
 
@@ -348,7 +348,7 @@ Siguiendo estos pasos, puedes configurar un proxy y disfrutar de la conexión Ne
                         console.error(`Error al reiniciar el bot: ${error.message}`);
                         message.reply('Hubo un error al reiniciar el bot.');
                     } else {
-                        message.reply('El bot ha sido reiniciado exitosamente.');
+                        message.reply('El bot ha sido reiniciado exitosamente..... espere unos segundos');
                     }
                 });
             });
