@@ -307,7 +307,7 @@ https://chat.whatsapp.com/EcMClegA2DVBZRiudPqYqP
      `);
                     break;
     // Verificar si el mensaje es un comando específico (ej: "$actualizar")
-    case (msg === 'actualizar') {
+    if (msg === 'actualizar') {
         message.reply('🔄 Actualizando el bot...');
 
         // Ejecutar el comando git pull para actualizar el bot
