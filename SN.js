@@ -310,30 +310,31 @@ https://chat.whatsapp.com/EcMClegA2DVBZRiudPqYqP
     case 'actualizar':
     message.reply('🔄 Actualizando el bot...');
 
-    // Ejecutar el comando git pull para actualizar el bot
-    exec('git pull', (error, stdout, stderr) => {
-        if (error) {
-            console.error(`Error durante la actualización: ${error.message}`);
-            message.reply('❌ Hubo un error al actualizar el bot.');
-            return;
-        }
-        if (stderr) {
-            console.error(`stderr: ${stderr}`);
-            message.reply(`⚠️ Actualización completa, pero con advertencias. Actualizar de nuevo: ${stderr}`);
-            return;
-        }
-        console.log(`stdout: ${stdout}`);
-        message.reply('✅ El bot ha sido actualizado exitosamente.');
+// Ejecutar el comando git pull para actualizar el bot
+exec('git pull', (error, stdout, stderr) => {
+    if (error) {
+        console.error(`Error durante la actualización: ${error.message}`);
+        message.reply('❌ Hubo un error al actualizar el bot.');
+        return;
+    }
+    if (stderr) {
+        console.error(`stderr: ${stderr}`);
+        message.reply(`⚠️Actualización completa, pero con advertencias..... actualizar de nuevo: ${stderr}`);
+        return;
+    }
+    console.log(`stdout: ${stdout}`);
+    message.reply('✅El bot ha sido actualizado exitosamente.');
 
-        // Reiniciar el bot con PM2
-        exec('pm2 restart mi-bot', (error) => {
-            if (error) {
-                console.error(`Error al reiniciar el bot: ${error.message}`);
-                message.reply('❌ Hubo un error al reiniciar el bot.');
-            } else {
-                message.reply('♻️ El bot ha sido reiniciado exitosamente. Espere unos segundos.');
-            }
+    // Reiniciar el bot con PM2
+    exec('pm2 restart mi-bot', (error) => {
+        if (error) {
+            console.error(`Error al reiniciar el bot: ${error.message}`);
+            message.reply('Hubo un error al reiniciar el bot.');
+        } else {
+            message.reply('♻️El bot ha sido reiniciado exitosamente..... espere unos segundos');
+        }
     });
+});
 
 // Iniciar el cliente
 client.initialize();
