@@ -334,7 +334,6 @@ https://chat.whatsapp.com/EcMClegA2DVBZRiudPqYqP
                 message.reply('♻️ El bot ha sido reiniciado exitosamente. Espere unos segundos.');
             }
     });
-}
 
 // Iniciar el cliente
 client.initialize();
