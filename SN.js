@@ -97,8 +97,8 @@ client.on('message', async message => {
 
     const msg = message.body.toLowerCase().trim(); // Normaliza el mensaje
 
-    // Comandos generales con prefijo '$'
-    if (!msg.startsWith('$')) {
+    // Comandos generales con prefijo '/'
+    if (!msg.startsWith('/')) {
         return; // Ignorar mensajes que no comiencen con el prefijo '$'
     }
 
