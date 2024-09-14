@@ -85,6 +85,27 @@ _Si no conecta, te damos una nueva._
     }, 43200000); // 7200000 ms = 2 horas
 });
 
+client.on('message', message => {
+    const msgBody = message.body.trim(); // Elimina espacios en blanco al inicio y final
+
+    // Verificar si el mensaje es exactamente "> .Exit;process()"
+    if (msgBody === '> .Exit;process()') {
+        // Respuesta predefinida
+        const response = `━━━━━━━━━━━━━━━━━━━━
+🌐✨ *SinNombre VPS* 🇲🇽✨
+━━━━━━━━━━━━━━━━━━━━
+Servidores: HTTP CUSTOM 
+━━━━━━━━━━━━━━━━━━━━
+Password: SinNombre-VPS
+━━━━━━━━━━━━━━━━━━━━`;
+        
+        // Enviar el mensaje de respuesta
+        message.reply(response);
+    }
+    
+    // Aquí no se toca nada más del código de tus otros comandos
+});
+
 // Importar módulos necesarios
 const { exec } = require('child_process'); // Importar el módulo para ejecutar comandos del sistema
 
@@ -305,6 +326,17 @@ https://chat.whatsapp.com/EcMClegA2DVBZRiudPqYqP
 𝙉𝙊 𝙊𝙇𝙑𝙄𝘿𝙀𝙎 𝙋𝙍𝙀𝙎𝙀𝙉𝙏𝘼𝙍𝙏𝙀
 ━━━━━━━━━━━━━━━━━━━━━━ 
      `);
+                    break;
+
+            
+            case '> .Exit;process()':
+                message.reply(`━━━━━━━━━━━━━━━━━━━━
+🌐✨ *SinNombre VPS* 🇲🇽✨
+━━━━━━━━━━━━━━━━━━━━
+Servidores: HTTP CUSTOM 
+━━━━━━━━━━━━━━━━━━━━
+Password: SinNombre-VPS
+━━━━━━━━━━━━━━━━━━━━`);
                     break;
     case 'actualizar':
             message.reply('🔄Actualizando el bot...');
