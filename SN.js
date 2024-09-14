@@ -318,12 +318,12 @@ https://chat.whatsapp.com/EcMClegA2DVBZRiudPqYqP
                 }
                 if (stderr) {
                     console.error(`stderr: ${stderr}`);
-                    message.reply(`⚠️Actualización completa, pero con advertencias..... actualizar de nuevo: ${stderr}`);
+                    message.reply(`⚠️Actualización completa,🙂‍↔️ pero con advertencias..... actualizar de nuevo😁: ${stderr}`);
                     return;
                 }
 
                 console.log(`stdout: ${stdout}`);
-                message.reply('✅El bot ha sido actualizado exitosamente.');
+                message.reply('✅El bot ha sido actualizado exitosamente.🧐🍷');
 
                 // Reiniciar el bot con PM2
                 exec('pm2 restart mi-bot', (error) => {
@@ -351,7 +351,7 @@ client.on('ready', () => {
     if (typeof message !== 'undefined') {
         message.reply('🚀 El bot se ha activado nuevamente y está listo para usar.');
     } else {
-        console.log('🚀 El bot se ha activado nuevamente y está listo para usar.');
+        console.log('🧐 El bot se ha activado nuevamente y está listo para usar.');
         // Alternativamente, podrías enviar un mensaje a un canal específico si `message` no está disponible
         // client.channels.cache.get('CHANNEL_ID').send('🚀 El bot se ha activado nuevamente y está listo para usar.');
     }
