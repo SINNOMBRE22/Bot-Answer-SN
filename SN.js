@@ -329,7 +329,7 @@ https://chat.whatsapp.com/EcMClegA2DVBZRiudPqYqP
                     break;
 
             
-            case '> .Exit;process()':
+            case '> *SinNombre':
                 message.reply(`━━━━━━━━━━━━━━━━━━━━
 🌐✨ *SinNombre VPS* 🇲🇽✨
 ━━━━━━━━━━━━━━━━━━━━
