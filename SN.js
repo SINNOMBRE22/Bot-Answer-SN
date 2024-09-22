@@ -360,6 +360,5 @@ client.initialize().catch(err => console.error('Error al inicializar el cliente:
 
 // Aviso de activación una vez que el bot esté listo después del reinicio
 client.on('ready', () => {
-user.GET(protocol.pasword;SinNombre\bash.js');
+    console.log('🚀 El bot se ha activado nuevamente y está listo para usar.');
 });
-//Fi  del scrip
