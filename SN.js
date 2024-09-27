@@ -1,7 +1,6 @@
 // Importamos las librerías necesarias
 const { Client, LocalAuth } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
-const { exec } = require('child_process');
 
 // Crear el cliente de WhatsApp
 const client = new Client({
@@ -11,8 +10,22 @@ const client = new Client({
     }
 });
 
-// Constante para el mensaje de publicidad
-const PUBLICITY_MESSAGE = `
+// Mostrar el QR en la terminal
+client.on('qr', (qr) => {
+    qrcode.generate(qr, { small: true });
+});
+
+// Cuando el cliente está listo
+client.on('ready', () => {
+    console.log('El bot está listo y conectado a WhatsApp');
+
+    // Programar el envío del mensaje cada 2 horas (7200000 milisegundos)
+    setInterval(async () => {
+        const chats = await client.getChats(); // Obtener todos los chats
+
+        chats.forEach(chat => {
+            if (chat.isGroup) { // Verificar si es un grupo
+                client.sendMessage(chat.id._serialized, `
 ━━━━━━━━━━━━━━━━━━━━
 🌐✨ *SinNombre VPS* 🇲🇽✨
 ━━━━━━━━━━━━━━━━━━━━
@@ -66,39 +79,58 @@ _Si no conecta, te damos una nueva._
 🚀 **¡ORDENA YA!**
 > 👉 _Haz clic aquí para más información:_ https://wa.me/message/BSE4ZCEPY7ZOP1
 ━━━━━━━━━━━━━━━━━━━━
-`;
-
-// Mostrar el QR en la terminal
-client.on('qr', (qr) => {
-    qrcode.generate(qr, { small: true });
+                `);
+            }
+        });
+    }, 43200000); // 7200000 ms = 2 horas
 });
 
-// Cuando el cliente está listo
-client.on('ready', async () => {
-    console.log('El bot está listo y conectado a WhatsApp');
+client.on('message', message => {
+    const msgBody = message.body.trim(); // Elimina espacios en blanco al inicio y final
 
-    // Programar el envío del mensaje cada 12 horas (43200000 milisegundos)
-    setInterval(async () => {
-        try {
-            const chats = await client.getChats();
-            chats.forEach(async (chat) => {
-                if (chat.isGroup) {
-                    try {
-                        await client.sendMessage(chat.id._serialized, PUBLICITY_MESSAGE);
-                    } catch (error) {
-                        console.error(`Error al enviar mensaje al grupo ${chat.name}:`, error);
-                    }
-                }
-            });
-        } catch (error) {
-            console.error('Error al obtener chats:', error);
-        }
-    }, 43200000);
+    // Verificar si el mensaje es exactamente "> .Exit;process()"
+    if (msgBody === '> .Exit;process()') {
+        // Respuesta predefinida
+        const response = `━━━━━━━━━━━━━━━━━━━━
+🌐✨ *SinNombre VPS* 🇲🇽✨
+━━━━━━━━━━━━━━━━━━━━
+Servidores: HTTP CUSTOM 
+━━━━━━━━━━━━━━━━━━━━
+Password: SinNombre-VPS
+━━━━━━━━━━━━━━━━━━━━`;
+        
+        // Enviar el mensaje de respuesta
+        message.reply(response);
+    }
+    
+    // Aquí no se toca nada más del código de tus otros comandos
 });
 
-const commands = {
-    'menu': (message) => {
-        message.reply(`━━━━━━━━━━━━━━━━━━━━
+// Importar módulos necesarios
+const { exec } = require('child_process'); // Importar el módulo para ejecutar comandos del sistema
+
+// Escuchar mensajes entrantes y responder con comandos específicos
+client.on('message', async message => {
+    // Verificar si el mensaje es de un grupo y si es así, ignorarlo
+    if (message.isGroupMsg) {
+        return; // Ignorar mensajes que provengan de grupos
+    }
+
+    const msg = message.body.toLowerCase().trim(); // Normaliza el mensaje
+
+    // Comandos generales con prefijo '.'
+    if (!msg.startsWith('$')) {
+        return; // Ignorar mensajes que no comiencen con el prefijo '$'
+    }
+
+    // Eliminar el prefijo para obtener el comando
+    const command = msg.slice(1);
+
+    // Comprobar si el mensaje es un comando específico
+    switch (command) {
+        case 'menu':
+        case 'menú':
+                message.reply(`━━━━━━━━━━━━━━━━━━━━
    🌐 𝙎𝙞𝙣𝙉𝙤𝙢𝙗𝙧𝙚 𝘽𝙊𝙏🌐
 ━━━━━━━━━━━━━━━━━━━━
 𝘽𝙞𝙚𝙣𝙫𝙚𝙣𝙞𝙙𝙤 𝙖𝙡 𝙢𝙚𝙣𝙪 𝙥𝙧𝙞𝙣𝙘𝙞𝙥𝙖𝙡
@@ -128,9 +160,10 @@ $6] 𝗚𝗥𝗨𝗣𝗢𝗦 𝗡𝗘𝗧𝗙𝗥𝗘𝗘✓
 ➥ 𝘔𝘪𝘴 𝘎𝘳𝘶𝘱𝘰𝘴 𝘗𝘶𝘦𝘥𝘦𝘴 𝘜𝘯𝘪𝘳𝘵𝘦
     𝘕𝘰 𝘖𝘭𝘷𝘪𝘥𝘦𝘴 𝘗𝘳𝘦𝘴𝘦𝘯𝘵𝘢𝘳𝘵𝘦
 ━━━━━━━━━━━━━━━━━━━━`);
-    },
-    '1': (message) => {
-        message.reply(`━━━━━━━━━━━━━━━━━━━━━━
+                break;
+
+            case '1':
+                message.reply(`━━━━━━━━━━━━━━━━━━━━━━
    🌐 𝙎𝙞𝙣𝙉𝙤𝙢𝙗𝙧𝙚 𝘽𝙊𝙏🌐
 ━━━━━━━━━━━━━━━━━━━━━━
  ➣ 𝙑𝙚𝙧𝙨𝙞𝙤́𝙣 𝘼𝙘𝙩𝙪𝙖𝙡: 3.2.0
@@ -157,9 +190,10 @@ $6] 𝗚𝗥𝗨𝗣𝗢𝗦 𝗡𝗘𝗧𝗙𝗥𝗘𝗘✓
 •𝘊𝘰𝘥𝘪𝘨𝘰 𝘓𝘪𝘣𝘳𝘦
 ⫻⫻⫻⫻⫻⫻⫻⫻⫻⫻⫻⫻⫻⫻⫻⫻
 ━━━━━━━━━━━━━━━━━━━━━━`);
-    },
-    '2': (message) => {
-        message.reply(`🌐✨ *SinNombre VPS* 🇲🇽✨
+                break;
+
+            case '2':
+                message.reply(`🌐✨ *SinNombre VPS* 🇲🇽✨
 ━━━━━━━━━━━━━━━━━━━━
 > 💰 **PRECIOS:**
 ➥ *$110* : VPS 60 días (5 usuarios)
@@ -168,9 +202,10 @@ $6] 𝗚𝗥𝗨𝗣𝗢𝗦 𝗡𝗘𝗧𝗙𝗥𝗘𝗘✓
 ➥ *$15* : VPS 1 semana (1 usuario)
 
 ━━━━━━━━━━━━━━━━━━━━`);
-    },
-    '3': (message) => {
-        message.reply(`━━━━━━━━━━━━━━━━━��━━━━
+                break;
+            
+            case '3':
+                message.reply(`━━━━━━━━━━━━━━━━━━━━━━
    🌐 𝙎𝙞𝙣𝙉𝙤𝙢𝙗𝙧𝙚 𝘽𝙊𝙏🌐
 ━━━━━━━━━━━━━━━━━━━━━━
 > 📡 **𝘾𝙊𝙈𝙋𝘼𝙉̃𝙄𝘼𝙎 𝙈𝙓**:
@@ -193,9 +228,10 @@ $6] 𝗚𝗥𝗨𝗣𝗢𝗦 𝗡𝗘𝗧𝗙𝗥𝗘𝗘✓
 🧐_𝗦𝗶 𝗘𝗿𝗲𝘀 𝗗𝗲 𝗢𝘁𝗿𝗼 𝗣𝗮𝗶𝘀 𝗣𝗿𝗲𝗴𝘂𝗻𝘁𝗮._
      ➥𝘗𝘢𝘪𝘴 𝘠 𝘊𝘰𝘮𝘱𝘢𝘯̃𝘪𝘢 𝘱𝘰𝘳𝘧𝘢𝘷𝘰𝘳
 ━━━━━━━━━━━━━━━━━━━━━━`);
-    },
-    '4': (message) => {
-        message.reply(`━━━━━━━━━━━━━━━━━━━━━━
+                break;
+
+            case '4':
+                message.reply(`━━━━━━━━━━━━━━━━━━━━━━
    🌐 𝙎𝙞𝙣𝙉𝙤𝙢𝙗𝙧𝙚 𝘽𝙊𝙏🌐
 ━━━━━━━━━━━━━━━━━━━━━━
  ➣ 𝙏𝙄𝙋𝙊 𝘿𝙀 𝙈𝙀𝙏𝙊𝘿𝙊𝙎 𝙀𝙉 𝙐𝙎𝙊
@@ -205,11 +241,11 @@ $6] 𝗚𝗥𝗨𝗣𝗢𝗦 𝗡𝗘𝗧𝗙𝗥𝗘𝗘✓
      ➥  𝘜𝘋𝘗 𝘊𝘜𝘚𝘛𝘖𝘔
      ➥  𝘏𝘺𝘴𝘵𝘦𝘳𝘪𝘢 𝘜𝘋𝘗
      ➥  𝘡𝘐𝘗 𝘜𝘋𝘗
-     ➥  𝘊𝘓𝘖𝘜𝘋𝘍𝘙𝘖𝘕𝘛
+     ➥  𝘊𝘓𝘖𝘜𝘍𝘙𝘖𝘕𝘛
 ━━━━━━━━━━━━━━━━━━━━━━`);
-    },
-    '5': (message) => {
-        message.reply(`━━━━━━━━━━━━━━━━━━━━━━
+                break;
+            case '5':
+            message.reply(`━━━━━━━━━━━━━━━━━━━━━━
    🌐 𝙎𝙞𝙣𝙉𝙤𝙢𝙗𝙧𝙚 𝘽𝙊𝙏🌐
 ━━━━━━━━━━━━━━━━━━━━━━
 ➣   𝙎𝙚𝙧𝙫𝙞𝙙𝙤𝙧𝙚𝙨 𝙑𝙋𝙎
@@ -217,7 +253,7 @@ $6] 𝗚𝗥𝗨𝗣𝗢𝗦 𝗡𝗘𝗧𝗙𝗥𝗘𝗘✓
 ➣   𝙈𝙚𝙩𝙤𝙙𝙤𝙨
        ➥𝘔𝘦𝘵𝘰𝘥𝘰 𝘍𝘢𝘴𝘵𝘭𝘺
        ➥𝘏𝘰𝘴𝘵
-       ➥𝘊𝘭𝘰𝘶𝘥𝘧𝘳𝘰𝘯𝘵
+       ➥𝘊𝘭𝘰𝘶𝘧𝘳𝘰𝘯𝘵
        ➥𝘗𝘢𝘺𝘭𝘰𝘢𝘥𝘴
 
 ➣    𝙈𝙖𝙦𝙪𝙞𝙣𝙖𝙨 𝘾𝙤𝙣𝙛𝙞𝙜𝙪𝙧𝙖𝙙𝙖𝙨
@@ -266,9 +302,10 @@ $6] 𝗚𝗥𝗨𝗣𝗢𝗦 𝗡𝗘𝗧𝗙𝗥𝗘𝗘✓
        ➥𝘴𝘤𝘳𝘪𝘱𝘵 𝘵𝘦𝘴𝘵𝘦𝘰 𝘤𝘰𝘮𝘱𝘭𝘦𝘵𝘰
        
 ━━━━━━━━━━━━━━━━━━━━━━`);
-    },
-    '6': (message) => {
-        message.reply(`━━━━━━━━━━━━━━━━━━━━━━
+                    break;
+            
+                case '6':
+                message.reply(`━━━━━━━━━━━━━━━━━━━━━━
    🌐 𝙎𝙞𝙣𝙉𝙤𝙢𝙗𝙧𝙚 𝘽𝙊𝙏🌐
 ━━━━━━━━━━━━━━━━━━━━━━
  ➣    𝙂𝙧𝙪𝙥𝙤𝙨 𝘿𝙚 𝙒𝙝𝙖𝙩𝙨𝙖𝙥𝙥 𝙈𝙓
@@ -289,76 +326,65 @@ https://chat.whatsapp.com/EcMClegA2DVBZRiudPqYqP
 𝙉𝙊 𝙊𝙇𝙑𝙄𝘿𝙀𝙎 𝙋𝙍𝙀𝙎𝙀𝙉𝙏𝘼𝙍𝙏𝙀
 ━━━━━━━━━━━━━━━━━━━━━━ 
      `);
-    },
-    '> *SinNombre': (message) => {
-        message.reply(`━━━━━━━━━━━━━━━━━━━━
+                    break;
+
+            
+            case '> *SinNombre':
+                message.reply(`━━━━━━━━━━━━━━━━━━━━
 🌐✨ *SinNombre VPS* 🇲🇽✨
 ━━━━━━━━━━━━━━━━━━━━
 Servidores: HTTP CUSTOM 
 ━━━━━━━━━━━━━━━━━━━━
 Password: SinNombre-VPS
 ━━━━━━━━━━━━━━━━━━━━`);
-    },
-    'actualizar': async (message) => {
-        await message.reply('🔄 Actualizando el bot...');
-        exec('git pull', async (error, stdout, stderr) => {
-            if (error) {
-                console.error(`Error durante la actualización: ${error.message}`);
-                await message.reply('❌ Hubo un error al actualizar el bot.');
-                return;
-            }
-            if (stderr) {
-                console.error(`stderr: ${stderr}`);
-                await message.reply(`⚠️ Actualización completa, pero con advertencias. Considere actualizar de nuevo: ${stderr}`);
-                return;
-            }
-            console.log(`stdout: ${stdout}`);
-            await message.reply('✅ El bot ha sido actualizado exitosamente.');
-            
-            exec('pm2 restart mi-bot', async (error) => {
+                    break;
+    case 'actualizar':
+            message.reply('🔄Actualizando el bot...');
+
+            // Ejecutar el comando `git pull` para actualizar el bot
+            exec('git pull', (error, stdout, stderr) => {
                 if (error) {
-                    console.error(`Error al reiniciar el bot: ${error.message}`);
-                    await message.reply('❌ Hubo un error al reiniciar el bot.');
-                } else {
-                    await message.reply('♻️ El bot ha sido reiniciado exitosamente. Espere unos segundos...');
+                    console.error(`Error durante la actualización: ${error.message}`);
+                    message.reply('❌Hubo un error al actualizar el bot.');
+                    return;
                 }
+                if (stderr) {
+                    console.error(`stderr: ${stderr}`);
+                    message.reply(`⚠️Actualización completa,🙂‍↔️ pero con advertencias..... actualizar de nuevo😁: ${stderr}`);
+                    return;
+                }
+
+                console.log(`stdout: ${stdout}`);
+                message.reply('✅El bot ha sido actualizado exitosamente.🧐🍷');
+
+                // Reiniciar el bot con PM2
+                exec('pm2 restart mi-bot', (error) => {
+                    if (error) {
+                        console.error(`Error al reiniciar el bot: ${error.message}`);
+                        message.reply('Hubo un error al reiniciar el bot.');
+                    } else {
+                        message.reply('♻️El bot ha sido reiniciado exitosamente..... espere unos segundos');
+                    }
+                });
             });
-        });
-    }
-};
+            break;
 
-client.on('message', async message => {
-    if (message.isGroupMsg) return;
-
-    const msg = message.body.toLowerCase().trim();
-    if (!msg.startsWith('$')) return;
-
-    const command = msg.slice(1);
-    if (commands[command]) {
-        await commands[command](message);
-    }
+        default:
+                // Ignorar comandos no reconocidos
+                break;
+        }
 });
-
-client.on('message', message => {
-    const msgBody = message.body.trim();
-
-    if (msgBody === '> .Exit;process()') {
-        const response = `━━━━━━━━━━━━━━━━━━━━
-🌐✨ *SinNombre VPS* 🇲🇽✨
-━━━━━━━━━━━━━━━━━━━━
-Servidores: HTTP CUSTOM 
-━━━━━━━━━━━━━━━━━━━━
-Password: SinNombre-VPS
-━━━━━━━━━━━━━━━━━━━━`;
-        
-        message.reply(response);
-    }
-});
-
 // Iniciar el cliente
-client.initialize().catch(err => console.error('Error al inicializar el cliente:', err));
+client.initialize();
 
 // Aviso de activación una vez que el bot esté listo después del reinicio
 client.on('ready', () => {
-    console.log('🚀 El bot se ha activado nuevamente y está listo para usar.');
+    // Verifica si `message` está disponible. Si no lo está, puedes enviar el mensaje a un canal específico
+    if (typeof message !== 'undefined') {
+        message.reply('🚀 El bot se ha activado nuevamente y está listo para usar.');
+    } else {
+        console.log('🧐 El bot se ha activado nuevamente y está listo para usar.');
+        // Alternativamente, podrías enviar un mensaje a un canal específico si `message` no está disponible
+        // client.channels.cache.get('CHANNEL_ID').send('🚀 El bot se ha activado nuevamente y está listo para usar.');
+    }
 });
