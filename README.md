@@ -26,6 +26,8 @@
 
 
 ```bash
+> apt install nodejs
+
 > node -v #verificamos la versión de node
 
 > curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
