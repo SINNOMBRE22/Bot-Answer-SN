@@ -77,7 +77,7 @@ Para detener al bot en termux
 
 ##Si encuentran algun error me comentan ;)
 
-　　⁯⁬⁢⁢⁣☟☟☟☟☟☟ Toca El Boton ☟☟☟☟☟☟
+　　☟☟☟☟ Toca El Boton ☟☟☟☟
 
 [![Enviar WhatsApp](https://img.shields.io/badge/Enviar%20WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/message/BSE4ZCEPY7ZOP1)
 
