@@ -74,8 +74,9 @@ Para detener al bot en termux
 
 ## Comentarios ó sugerencias :3
 
-```bash
-> Si encuentran algun error me comentan ;)
+
+##Si encuentran algun error me comentan ;)
+
 <a href="https://wa.me/message/BSE4ZCEPY7ZOP" target="_blank" style="display: inline-block; background-color: #25D366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Enviar WhatsApp</a>
 
 ```
