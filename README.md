@@ -77,7 +77,7 @@ Para detener al bot en termux
 
 ##Si encuentran algun error me comentan ;)
 
-<a href="https://wa.me/message/BSE4ZCEPY7ZOP1" target="_blank" style="display: inline-block; background-color: #25D366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Enviar WhatsApp</a>
+　　⁯⁬⁢⁢⁣☟☟☟☟☟☟ Toca El Boton ☟☟☟☟☟☟
 
 [![Enviar WhatsApp](https://img.shields.io/badge/Enviar%20WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/message/BSE4ZCEPY7ZOP1)
 
