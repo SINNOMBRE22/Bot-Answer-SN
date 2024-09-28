@@ -9,7 +9,7 @@
 *🤖 Este es un bot auto responder para WhatsApp que puedes modificar fácilmente. No soy programador, pero he hecho este bot con algunos recursos simples.* 🩹
 
 ## **🚀 Instalación**
-## **Usar Ubuntu**
+## **De preferencia Usar Ubuntu 22.4.0**
 ### **Para empezar desde cero VPS:**
 
 ## Instalacion
