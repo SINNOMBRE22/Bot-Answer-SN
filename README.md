@@ -76,8 +76,8 @@ Para detener al bot en termux
 
 ```bash
 > Si encuentran algun error me comentan ;)
- <a href="https://wa.me/message/BSE4ZCEPY7ZOP1">
 ```
+<a href="https://wa.me/message/BSE4ZCEPY7ZOP1">
 
 ### **📌 Notas:**
 - ✏️ Puedes modificar el código del bot según tus necesidades.
