@@ -22,17 +22,18 @@
 ### **📝 Recomendaciones:**
 1. **Clonar y configurar:** Asegúrate de clonar el repositorio correctamente.
 2. **Dependencias:** Instalar todas las dependencias requeridas para evitar errores.
-3. **node debe estar actualizando
+3. **node debe estar actualizando**
 
 
 ```bash
+> node -v (verificamos versión de node
+
 > curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 
 > nvm ls-remote
 
 > nvm install 22.6.0
 
-> node -v
 ```
 
 ## Despues de tener todos los packs instalados en la VPS solo usen estos comandos para comenzar
