@@ -93,7 +93,7 @@ Para detener al bot en termux
 - ✏️ Puedes modificar el código del bot según tus necesidades.
 - 🛠️ No necesitas ser un experto para usarlo, pero asegúrate de seguir los pasos correctamente.
 
----
 ```
 
 #Me Gustaria Declararle Mi Amor Pero Sólo Se Declarar Variables 
+---
