@@ -26,13 +26,13 @@
 
 
 ```bash
-> node -v (verificamos versión de node)
+> node -v #verificamos la versión de node
 
 > curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 
 > nvm ls-remote
 
-> nvm install 22.6.0
+> nvm install 22.6.0   #Version a instalar
 
 ```
 
