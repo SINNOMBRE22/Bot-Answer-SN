@@ -5,29 +5,80 @@
 *🤖 Este es un bot auto responder para WhatsApp que puedes modificar fácilmente. No soy programador, pero he hecho este bot con algunos recursos simples.* 🩹
 
 ## **🚀 Instalación**
-### **Para empezar desde cero en Termux o VPS:**
+## **Usar Ubuntu**
+### **Para empezar desde cero VPS:**
 
+## Instalacion
 ```bash
-📂 termux-setup-storage   #(da permisos de almacenamiento)
-⚙️ apt update && pkg update
-⚙️ apt upgrade && pkg upgrade
-⚙️ apt install git && pkg install git
-🐙 git clone https://github.com/SINNOMBRE22/Bot-Answer-SN
-💻 cd Bot-Answer-SN
-📦 npm install
-🛠️ node SN.js
-📦 npm install whatsapp-web.js   #(si es necesario)
+> apt update && pkg update
+> apt upgrade && pkg upgrade
+> apt install git && pkg install git
 ```
 
 ### **📝 Recomendaciones:**
 1. **Clonar y configurar:** Asegúrate de clonar el repositorio correctamente.
 2. **Dependencias:** Instalar todas las dependencias requeridas para evitar errores.
+3. **node debe estar actualizando
 
-## **🚀𝙋𝙖𝙧𝙖 𝙦𝙪𝙚 𝙨𝙞𝙜𝙖 𝙩𝙧𝙖𝙗𝙖𝙟𝙖𝙣𝙙𝙤 𝙚𝙣 𝙨𝙚𝙜𝙪𝙣𝙙𝙤 𝙥𝙡𝙖𝙣𝙤**
+
+```bash
+> curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+
+> nvm ls-remote
+
+> nvm install 22.6.0
+
+> node -v
 ```
-npm install pm2 -g
-pm2 start SN.js --name "mi-bot" #(para el bot se actualice desde WhatsApp)
+
+## Despues de tener todos los packs instalados en la VPS solo usen estos comandos para comenzar
+
+```bash
+> git clone https://github.com/SINNOMBRE22/Bot-Answer-SN
+> cd SN.js
+> npm install
+> npm i
+> sudo apt-get install libgbm-dev
+> sudo apt-get install libasound2
+> node SN.js
+Para detener al bot en termux
+> Ctrl+c
 ```
+## Ejecutar el bot estable con PM2
+
+1.- instalar PM2 en VPS :
+```bash
+
+> npm install -g pm2
+
+```  
+
+2.- Ejecutar el bot en PM2 :
+```bash 
+
+> pm2 start SN.js --name "mi-bot"
+
+```
+3.- Visualizar proceso en PM2 :
+```bash 
+
+> pm2 monit
+[ ! ] Para salir del monitor usa la combinación de CTRL + c
+```
+
+4.- Eliminar PM2 para el bot :
+```bash
+
+> pm2 kill
+```
+
+## Comentarios ó sugerencias :3
+
+```bash
+> Si encuentran algun error me comentan ;)
+ <a href="https://wa.me/message/BSE4ZCEPY7ZOP1">
+```
+
 ### **📌 Notas:**
 - ✏️ Puedes modificar el código del bot según tus necesidades.
 - 🛠️ No necesitas ser un experto para usarlo, pero asegúrate de seguir los pasos correctamente.
