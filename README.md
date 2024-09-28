@@ -14,9 +14,11 @@
 
 ## Instalacion
 ```bash
-> apt update && pkg update
-> apt upgrade && pkg upgrade
-> apt install git && pkg install git
+> sudo apt update
+> sudo apt upgrade
+> apt install git
+> sudo apt-get install libgbm-dev
+> sudo apt-get install libasound2
 ```
 ### Si Tu Vps Es Virgen Sera Necesario Este Comandó
 ```bash
@@ -72,13 +74,16 @@
 
 ```bash
 > git clone https://github.com/SINNOMBRE22/Bot-Answer-SN
-> cd SN.js
+
+> cd Bot-Answer-SN
+
 > npm install
+
 > npm i
-> sudo apt-get install libgbm-dev
-> sudo apt-get install libasound2
+
 > node SN.js
-Para detener al bot en termux
+
+Para detener al bot en la VPS 
 > Ctrl+c
 ```
 ## Ejecutar el bot estable con PM2
