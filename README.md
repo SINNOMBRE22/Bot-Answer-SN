@@ -20,7 +20,7 @@
 > sudo apt-get install libgbm-dev
 > sudo apt-get install libasound2
 ```
-### Si Tu Vps Es Virgen Sera Necesario Este Comandó
+### NO OLVIDÉS ESTE COMANDO ES IMPORTANTE 
 ```bash
 > sudo apt install -y \
     libatk-bridge2.0-0 \
