@@ -1,6 +1,7 @@
 // Importamos las librerías necesarias
 const { Client, LocalAuth } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
+const { exec } = require('child_process');
 
 // Crear el cliente de WhatsApp
 const client = new Client({
