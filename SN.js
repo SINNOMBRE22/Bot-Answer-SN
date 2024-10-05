@@ -20,10 +20,6 @@ client.on('qr', (qr) => {
 client.on('ready', () => {
     console.log('El bot está listo y conectado a WhatsApp');
 
-                client.on('message', (message) => {
-    console.log(`Nuevo mensaje de ${message.from}: ${message.body}`);
-});
-
     // Programar el envío del mensaje cada 2 horas (7200000 milisegundos)
     setInterval(async () => {
         const chats = await client.getChats(); // Obtener todos los chats
