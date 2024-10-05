@@ -114,7 +114,7 @@ client.on('message', message => {
 ━━━━━━━━━━━━━━━━━━━━
 MAQUINAS CONFIGURADAS
 ────────────────────
-➥$100 PESOS MEXICANOS
+➥$250 PESOS MEXICANOS
 ────────────────────
 ➥Renovación mensual
 ────────────────────
