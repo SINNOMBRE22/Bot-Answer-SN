@@ -424,7 +424,7 @@ Password: SinNombre-VPS
                         console.error(`Error al reiniciar el bot: ${error.message}`);
                         message.reply('Hubo un error al reiniciar el bot.');
                     } else {
-                        message.reply('♻️El bot ha sido reiniciado exitosamente..... espere unos segundos');
+                        message.reply('♻️El bot ha sido reiniciado exitosamente..... espere unos segundos😁');
                     }
                 });
             });
