@@ -138,8 +138,6 @@ MAQUINAS CONFIGURADAS
 });
 
 // Importar módulos necesarios
-const { exec } = require('child_process'); // Importar el módulo para ejecutar comandos del sistema
-
 // Escuchar mensajes entrantes y responder con comandos específicos
 client.on('message', async message => {
     // Verificar si el mensaje es de un grupo y si es así, ignorarlo
@@ -397,6 +395,10 @@ Password: SinNombre-VPS
     case 'actualizar':
             message.reply('🔄Actualizando el bot...');
 
+            client.on('message', (message) => {
+    console.log(`Nuevo mensaje de ${message.from}: ${message.body}`);
+});
+           
             // Ejecutar el comando `git pull` para actualizar el bot
             exec('git pull', (error, stdout, stderr) => {
                 if (error) {
